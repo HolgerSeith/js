@@ -6,16 +6,62 @@ adst
 */
 
 
-var myName = "Holger";
-myName = 32;
-console.log(myName);
+var firstName = 'Ho\n\nl"ger' + ' ' + 'Seith ';
+let age = 36
+firstName += age
+if (age == 36) {
 
-let ourName ="seith";
-const pi = 3.14;
+    //    console.log(firstName[8]);
+}
 
 
-var ourDecimal = 15
-var otherDecimal = 6
+//wordBlanks("dog", "big", "ran", "quickly");
+//wordBlanks("bike", "slow", "flew", "slowly");
 
-var result = ourDecimal % otherDecimal;
-console.log(result);
+
+var ourArray = []
+
+ourArray.push("holger", "seith");
+ourArray.shift();
+
+const LOCAL_FORECAST = {
+    today: { min: 10, max: 25 },
+    tomorrow: { min: 5, max: 20 }
+};
+
+function getMax(forecast) {
+
+    const { tomorrow: { max: maxOfTomorrow } } = forecast;
+    return maxOfTomorrow;
+}
+
+
+console.log(getMax(LOCAL_FORECAST));
+
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a]
+console.log(a);
+console.log(b);
+
+let arr = [1, 2, 3, 4];
+
+
+class Person {
+    constructor(name) {
+        this._name = name;
+    }
+
+    get name() {
+        return this._name;
+    }
+    set name(newName) {
+        this._name = newName;
+    }
+}
+
+let person = new Person("Holger");
+person.name = "Seith";
+
+console.log(person.name);
